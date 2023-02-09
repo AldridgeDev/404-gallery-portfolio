@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body {
+    background: #131212;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: min(150px, 100%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid 10px #f1f1f1;
+    margin: 20px 20px 100px 20px;
+}
+
+#masonry-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: masonry;
+    align-content: start; 
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;   
+}
+
+figcaption {
+    grid-row: 2;
+    grid-column: 1;
+    /* background-color: rgba(255, 255, 255, .5); */
+    padding: 1em;
+    justify-self: start;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.masonry-figure span {
+    color: #fff;
+    font-family: 'Itim', cursive;
+    transition: .8s opacity;
+}
+
+.masonry-img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(#000, .7);
+    transition: .8s opacity;
+}
+
+.portfolio-img {
+    max-height: 30px;
+    max-width: 30px;
+    width: 100%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: solid 3px #fff;
+    transition: .8s opacity;
+}
+
+#masonry-gallery:hover img,
+#masonry-gallery:hover span {
+    opacity: 0.3;
+}
+
+#masonry-gallery:hover .masonry-figure :hover {
+    opacity: 1;
+}
